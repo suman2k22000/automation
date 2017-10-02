@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [TestGroup1]" parallel="classes">
+  <parameter name="browser" value="firefox"/>
+  <test name="Group1(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="group1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="scripts.SearchHelpTopics5">
+        <methods>
+          <include name="searchHelpTopics5"/>
+          <include name="setup"/>
+          <include name="takeScreenShot"/>
+        </methods>
+      </class> <!-- scripts.SearchHelpTopics5 -->
+      <class name="scripts.SearchHelpTopics3">
+        <methods>
+          <include name="setup"/>
+          <include name="takeScreenShot"/>
+        </methods>
+      </class> <!-- scripts.SearchHelpTopics3 -->
+    </classes>
+  </test> <!-- Group1(failed) -->
+</suite> <!-- Failed suite [TestGroup1] -->
